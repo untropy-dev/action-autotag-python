@@ -21,7 +21,7 @@ def main():
         if tag.name == version_tag:
             return
 
-    sha = repo.get_commits()[0].sha
+    sha = os.environ["GITHUB_SHA"]
     repo.create_git_ref(f"refs/tags/{version_tag}", sha)
 
 
