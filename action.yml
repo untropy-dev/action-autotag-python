@@ -11,6 +11,9 @@ inputs:
   variable:
     description: Variable name containing version information
     required: true
+  github_token:
+    description: Github token used to push tag when version changes
+    required: true
   prefix:
     description: Prefix to add to the version tag
     required: false
